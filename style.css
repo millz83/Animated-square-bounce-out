@@ -1,0 +1,74 @@
+body {
+    background-color: rgb(33, 72, 187);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    height:100vh;
+}
+
+#animated-square {
+    width:200px;
+    height:200px;
+    position: relative;
+    background-color: sandybrown;
+    line-height:150px;
+    text-align: center;
+    color:blue;
+    font-size: 25px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border:solid 3px skyblue;
+
+}
+
+
+.animated-bounceOut {
+	-webkit-animation-duration: 2s;
+	animation-duration: 2s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+	-webkit-animation-timing-function: ease-in-out;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count:infinite;
+	-webkit-animation-iteration-count:infinite;
+}
+
+@-webkit-keyframes bounceOut {
+    0% {
+        -webkit-transform:scale(1);
+    }
+    25% {
+        -webkit-transform: scale(.95);
+    }
+    50% {
+        opacity: 1;
+        -webkit-transform: scale(1.1);
+    }
+    100% {
+        opacity: 0;
+        -webkit-transform:scale(.3);
+    }
+}
+
+
+@keyframes bounceOut {
+    0% {
+        transform:scale(1);
+    }
+    25% {
+        transform:scale(.95);
+    }
+    50% {
+        opacity: 1;
+        transform:scale(1.1);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(.3);
+    }
+}
+
+.animated-bounceOut {
+  -webkit-animation-name:bounceOut;
+  animation-name: bounceOut;
+}
